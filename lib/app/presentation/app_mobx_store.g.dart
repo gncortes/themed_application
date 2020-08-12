@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'change_theme.dart';
+part of 'app_mobx_store.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,15 +8,16 @@ part of 'change_theme.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$ChangeTheme on _ChangeThemeBase, Store {
-  Computed<bool> _$isDarkComputed;
+mixin _$AppMobxStore on _AppMobxStoreBase, Store {
+  Computed<bool> _$isDarkThemeComputed;
 
   @override
-  bool get isDark => (_$isDarkComputed ??=
-          Computed<bool>(() => super.isDark, name: '_ChangeThemeBase.isDark'))
-      .value;
+  bool get isDarkTheme =>
+      (_$isDarkThemeComputed ??= Computed<bool>(() => super.isDarkTheme,
+              name: '_AppMobxStoreBase.isDarkTheme'))
+          .value;
 
-  final _$themeAtom = Atom(name: '_ChangeThemeBase.theme');
+  final _$themeAtom = Atom(name: '_AppMobxStoreBase.theme');
 
   @override
   ThemeData get theme {
@@ -31,17 +32,17 @@ mixin _$ChangeTheme on _ChangeThemeBase, Store {
     });
   }
 
-  final _$_ChangeThemeBaseActionController =
-      ActionController(name: '_ChangeThemeBase');
+  final _$_AppMobxStoreBaseActionController =
+      ActionController(name: '_AppMobxStoreBase');
 
   @override
-  dynamic changeTheme() {
-    final _$actionInfo = _$_ChangeThemeBaseActionController.startAction(
-        name: '_ChangeThemeBase.changeTheme');
+  dynamic changeTheme(bool value) {
+    final _$actionInfo = _$_AppMobxStoreBaseActionController.startAction(
+        name: '_AppMobxStoreBase.changeTheme');
     try {
-      return super.changeTheme();
+      return super.changeTheme(value);
     } finally {
-      _$_ChangeThemeBaseActionController.endAction(_$actionInfo);
+      _$_AppMobxStoreBaseActionController.endAction(_$actionInfo);
     }
   }
 
@@ -49,7 +50,7 @@ mixin _$ChangeTheme on _ChangeThemeBase, Store {
   String toString() {
     return '''
 theme: ${theme},
-isDark: ${isDark}
+isDarkTheme: ${isDarkTheme}
     ''';
   }
 }

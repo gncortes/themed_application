@@ -1,5 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:themed_application/app/interfaces/local_storage_interface.dart';
+import 'local_storage_interface.dart';
 
 class SharedLocalStorageService implements LocalStorageInterface {
   @override

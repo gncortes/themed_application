@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:themed_application/app/interfaces/local_storage_interface.dart';
-import 'package:themed_application/app/stores/change_theme.dart';
-import 'app_widget.dart';
-import 'local_storage/shared_preferences.dart';
-import 'ui/home_page.dart';
+import 'package:themed_application/app/domain/business_rule/change_theme.dart';
+import 'presentation/app_mobx_store.dart';
+import 'presentation/app_widget.dart';
+import 'presentation/pages/home/home_page.dart';
+import 'repositories/local_storage/local_storage_interface.dart';
+import 'repositories/local_storage/shared_preferences.dart';
 
 class AppModule extends MainModule{
   @override
   List<Bind> get binds => [
-    Bind((i)=> ChangeTheme(i.get()),lazy: false),
-    Bind<LocalStorageInterface>((i)=> SharedLocalStorageService(),lazy: false)
+    Bind((i) => AppMobxStore(i.get())),
+    Bind<LocalStorageInterface>((i) => SharedLocalStorageService()),
+    Bind((i) => ChangeTheme(i.get()),lazy: false),
   ];
 
   @override
