@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:themed_application/app/domain/business_rule/change_theme.dart';
+import 'themes/dark_theme.dart';
+import 'themes/light_theme.dart';
 part 'app_mobx_store.g.dart';
 
 class AppMobxStore = _AppMobxStoreBase with _$AppMobxStore;
@@ -16,12 +18,12 @@ abstract class _AppMobxStoreBase with Store {
 
   _AppMobxStoreBase(this.changeThemeController) {
     changeThemeController.getTheme().then((value) =>
-        {value ? theme = ThemeData.dark() : theme = ThemeData.light()});
+        {value ? theme = darkTheme : theme = lightTheme});
   }
 
   @action
   changeTheme(bool value) {
-    theme = value ? ThemeData.dark() : ThemeData.light();
+    theme = value ?  darkTheme : lightTheme;
     changeThemeController.setTheme(isDarkTheme);
   }
 }

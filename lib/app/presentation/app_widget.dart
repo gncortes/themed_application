@@ -7,10 +7,10 @@ class AppWidget extends StatelessWidget {
   final controller = Modular.get<AppMobxStore>();
   @override
   Widget build(BuildContext context) {
-    return Observer(builder: (_) {
+    return Observer(builder: (context) {
       return Visibility(
         visible: controller.theme != null,
-        replacement: Center(child: CircularProgressIndicator(),),
+        replacement: Container(color: Colors.white,),
         child: MaterialApp(
           title: 'Flutter Themes',
           theme: controller.theme,
