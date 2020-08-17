@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:themed_application/app/domain/business_rule/change_theme.dart';
+import 'package:themed_application/app/presentation/pages/home/home_controller.dart';
 import 'presentation/app_mobx_store.dart';
 import 'presentation/app_widget.dart';
 import 'presentation/pages/home/home_page.dart';
@@ -13,6 +14,7 @@ class AppModule extends MainModule{
     Bind((i) => AppMobxStore(i.get())),
     Bind<LocalStorageInterface>((i) => SharedLocalStorageService()),
     Bind((i) => ChangeTheme(i.get()),lazy: false),
+    Bind((i) => HomeController(i.get())),
   ];
 
   @override

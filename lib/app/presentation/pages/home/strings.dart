@@ -1,0 +1,13 @@
+const String title = "Welcome to themed_application";
+const String darkThemeToString = "dark theme";
+const String lightThemeToString = "light theme";
+const String assetGithub = "assets/Octocat.png";
+const String assetLinkedin = "assets/linkedin.png";
+const String textGithub = "github repository";
+const String textLinkedin = "follow me on linkedin";
+const String buttonSignup = "sign up";
+const String buttonSignin = "sign in";
+const String textDivisorButtons1 = "or";
+const String textDivisorButtons2 = "alredy have an account";
+const String urlGithub = "https://github.com/gncortes/themed_application";
+const String urlLinkedin = "https://www.linkedin.com/in/gabriel-novais-b063151a2/";
